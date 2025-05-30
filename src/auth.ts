@@ -114,6 +114,7 @@ const handleSnsLogin = async ({
     organizationId: subOrgId,
     publicKey: indexedDbClientPublicKey,
     oidcToken,
+    expirationSeconds: (60 * 60 * 24 * 7).toString(), // 7 days
   });
 
   if (!session) {
