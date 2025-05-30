@@ -1,0 +1,20 @@
+{
+  "name": "turnkey-proxy",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.3",
+    "@turnkey/sdk-server": "^4.0.0",
+    "dotenv": "^16.5.0",
+    "hono": "^4.7.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3"
+  }
+}
