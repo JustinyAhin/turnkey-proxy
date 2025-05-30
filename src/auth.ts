@@ -1,5 +1,5 @@
 import { config } from "dotenv";
-import { Turnkey } from "@turnkey/sdk-server";
+import { DEFAULT_ETHEREUM_ACCOUNTS, Turnkey } from "@turnkey/sdk-server";
 
 config();
 
@@ -96,6 +96,10 @@ const handleSnsLogin = async ({
           ],
         },
       ],
+      wallet: {
+        walletName: `${name ?? email}'s wallet`,
+        accounts: DEFAULT_ETHEREUM_ACCOUNTS,
+      },
     });
 
     if (!createResp?.subOrganizationId) {
